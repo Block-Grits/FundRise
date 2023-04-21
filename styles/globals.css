@@ -13,3 +13,12 @@
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: #919399;
 }
+
+@layer components {
+.smallCard{
+@apply
+bg-gray-100 text-black
+w-72 min-h-[1rem] border-solid
+drop-shadow-md rounded overflow-hidden
+}
+}
