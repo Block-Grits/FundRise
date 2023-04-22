@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*================ create campaign form scroll bar ================*/
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -15,10 +17,23 @@
 }
 
 @layer components {
-.smallCard{
-@apply
-bg-gray-100 text-black
+  .smallCard {
+    @apply bg-gray-100 text-black
 w-72 min-h-[1rem] border-solid
-drop-shadow-md rounded overflow-hidden
+drop-shadow-md rounded overflow-hidden;
+  }
 }
+
+/*================ Featured carousel animation ================*/
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-move {
+  animation: move 3s infinite;
 }
