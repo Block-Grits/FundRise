@@ -1,0 +1,502 @@
+[
+    {
+        "name": "ContributionWithdrawn",
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "type": "event"
+    },
+    {
+        "name": "Deposit",
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "customerAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "type": "event"
+    },
+    {
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "type": "event"
+    },
+    {
+        "name": "ProjectCreated",
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "title",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "internalType": "string",
+                "name": "category",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "internalType": "string",
+                "name": "location",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "goal",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "isFeatured",
+                "type": "bool"
+            }
+        ],
+        "type": "event"
+    },
+    {
+        "name": "Withdraw",
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "customerAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+            }
+        ],
+        "type": "event"
+    },
+    {
+        "name": null,
+        "type": "fallback",
+        "stateMutability": "payable"
+    },
+    {
+        "name": "adminFeeAddress",
+        "outputs": [
+            {
+                "internalType": "address payable",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "contributeToProject",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "payable"
+    },
+    {
+        "name": "createProject",
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_title",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_category",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_location",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_image",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_goal",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_startTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_endTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "_isFeatured",
+                "type": "bool"
+            }
+        ],
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "payable"
+    },
+    {
+        "name": "customerBalances",
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "deposit",
+        "type": "function",
+        "stateMutability": "payable"
+    },
+    {
+        "name": "getContributors",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "getCustomerBalance",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "getLatestProjectId",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "getProjects",
+        "outputs": [
+            {
+                "internalType": "struct FundRaiser.Project[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "getTotalContributedAmount",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "isFeaturedFee",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "projects",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "title",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "category",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "location",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "goal",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "startTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "endTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "fundsRaised",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "isFeatured",
+                "type": "bool"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "renounceOwnership",
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": "setAdminFeeAddress",
+        "inputs": [
+            {
+                "internalType": "address payable",
+                "name": "_adminFeeAddress",
+                "type": "address"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": "setIsFeaturedFee",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_newFee",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": "totalProject",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "view"
+    },
+    {
+        "name": "transferOwnership",
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": "withdraw",
+        "inputs": [
+            {
+                "internalType": "address payable",
+                "name": "receiver",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "withdrawAmount",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": "withdrawContributions",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            }
+        ],
+        "type": "function",
+        "stateMutability": "nonpayable"
+    },
+    {
+        "name": null,
+        "type": "receive",
+        "stateMutability": "payable"
+    }
+]
